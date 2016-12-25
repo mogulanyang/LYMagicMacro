@@ -1,6 +1,10 @@
 ![logo](https://github.com/mogulanyang/LYMagicMacro/blob/master/sucai/magic.png)
 # LYMagicMacro
-如果没有,该如何创建?
+**如果没有,该如何创建?
+你还在一次一次的写无数行代码进行控件的创建,添加,布局么?
+你还在一次一次的进行属性的声明么?
+小兰魔法宏,一个.h文件,解决你的绝大部分烦恼.**
+小兰魔法宏现在刚刚创建出来,会继续坚持维护.致力于忘掉分类,拒绝耦合,添加更多更方便的功能,更轻量级.我也会修复一些漏洞使他更安全,更方便,更简单.
 ## 功能
 **快速声明和初始化控件的宏定义.**  
 
@@ -34,6 +38,7 @@ CollectionView_(mainCollectionView)
 // 还有其他....
 ```
 ###懒加载初始化控件
+如果你需要添加额外的属性,括号里面,使用obj来添加各种属性即可.
 ```
 #pragma mark - 懒加载初始化
 // 懒加载button
@@ -94,3 +99,6 @@ GET_CollectionView_(mainCollectionView,
                     [obj registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"collectionCell"];
                     )
 ```
+## 注意点
+- 不要修改初始化锁使用的宏,否则会出现问题.如果需要搬运,请先将需要搬运的代码注释,再进行搬运.
+- 如果需要其他个性初始化,只需要在最后面加一个逗号,把需要添加的属性赋值给obj即可.
