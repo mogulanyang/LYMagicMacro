@@ -440,7 +440,7 @@ block?(block(__VA_ARGS__)):(failReturnValue)
         ) \
 }
 //初始化collectionViewFlowLayout
-#define GET_FlowLyout_(ly_name, ly_scrollDirection, ly_itemSize, ly_minimumLineSpacing, ly_minimumInteritemSpacing, ...) \
+#define GET_FlowLayout_(ly_name, ly_scrollDirection, ly_itemSize, ly_minimumLineSpacing, ly_minimumInteritemSpacing, ...) \
 - (UICollectionViewFlowLayout *)ly_name \
 { \
     ly_lazy_(ly_name,\
