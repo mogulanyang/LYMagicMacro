@@ -1,0 +1,640 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1035C49272479B2AB2874D51 /* libPods-小兰魔法书UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 213CA5EADBFD97CE9AB4F8B8 /* libPods-小兰魔法书UITests.a */; };
+		A8C9B6021E0E8099007DFBB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C9B6011E0E8099007DFBB5 /* main.m */; };
+		A8C9B6051E0E8099007DFBB5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C9B6041E0E8099007DFBB5 /* AppDelegate.m */; };
+		A8C9B60D1E0E8099007DFBB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C9B60C1E0E8099007DFBB5 /* Assets.xcassets */; };
+		A8C9B6101E0E8099007DFBB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C9B60E1E0E8099007DFBB5 /* LaunchScreen.storyboard */; };
+		A8C9B61B1E0E8099007DFBB5 /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C9B61A1E0E8099007DFBB5 /* _____UITests.m */; };
+		A8C9B6351E0E80E1007DFBB5 /* LYBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C9B6291E0E80E1007DFBB5 /* LYBaseController.m */; };
+		A8C9B6361E0E80E1007DFBB5 /* NSArray+LYExt.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C9B6311E0E80E1007DFBB5 /* NSArray+LYExt.m */; };
+		A8C9B6371E0E80E1007DFBB5 /* UIView+LYExt.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C9B6331E0E80E1007DFBB5 /* UIView+LYExt.m */; };
+		A8C9B6391E0E8135007DFBB5 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A8C9B6381E0E8135007DFBB5 /* Podfile */; };
+		A8C9B63E1E0EE916007DFBB5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C9B63D1E0EE916007DFBB5 /* Person.m */; };
+		E1259BC36F8CC8B3C9F226CB /* libPods-小兰魔法书.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3EBAA4672BE6C00C9563BE /* libPods-小兰魔法书.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A8C9B6171E0E8099007DFBB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8C9B5F51E0E8099007DFBB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8C9B5FC1E0E8099007DFBB5;
+			remoteInfo = "小兰魔法书";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		213CA5EADBFD97CE9AB4F8B8 /* libPods-小兰魔法书UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-小兰魔法书UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30E40D7B3B05455C3C0C94E5 /* Pods-小兰魔法书UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-小兰魔法书UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-小兰魔法书UITests/Pods-小兰魔法书UITests.release.xcconfig"; sourceTree = "<group>"; };
+		4C6000A4D116B650AA378B0D /* Pods-小兰魔法书UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-小兰魔法书UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-小兰魔法书UITests/Pods-小兰魔法书UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7B3EBAA4672BE6C00C9563BE /* libPods-小兰魔法书.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-小兰魔法书.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8608317D779D5481D9ED7600 /* Pods-小兰魔法书.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-小兰魔法书.debug.xcconfig"; path = "Pods/Target Support Files/Pods-小兰魔法书/Pods-小兰魔法书.debug.xcconfig"; sourceTree = "<group>"; };
+		91B91EE28AF8D0F988E44B38 /* Pods-小兰魔法书.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-小兰魔法书.release.xcconfig"; path = "Pods/Target Support Files/Pods-小兰魔法书/Pods-小兰魔法书.release.xcconfig"; sourceTree = "<group>"; };
+		A8C9B5FD1E0E8099007DFBB5 /* 小兰魔法书.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "小兰魔法书.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8C9B6011E0E8099007DFBB5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A8C9B6031E0E8099007DFBB5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A8C9B6041E0E8099007DFBB5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A8C9B60C1E0E8099007DFBB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A8C9B60F1E0E8099007DFBB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A8C9B6111E0E8099007DFBB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8C9B6161E0E8099007DFBB5 /* 小兰魔法书UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "小兰魔法书UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8C9B61A1E0E8099007DFBB5 /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
+		A8C9B61C1E0E8099007DFBB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8C9B6281E0E80E1007DFBB5 /* LYBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBaseController.h; sourceTree = "<group>"; };
+		A8C9B6291E0E80E1007DFBB5 /* LYBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBaseController.m; sourceTree = "<group>"; };
+		A8C9B62D1E0E80E1007DFBB5 /* LYConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYConfig.h; sourceTree = "<group>"; };
+		A8C9B62F1E0E80E1007DFBB5 /* LYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYExtension.h; sourceTree = "<group>"; };
+		A8C9B6301E0E80E1007DFBB5 /* NSArray+LYExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LYExt.h"; sourceTree = "<group>"; };
+		A8C9B6311E0E80E1007DFBB5 /* NSArray+LYExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LYExt.m"; sourceTree = "<group>"; };
+		A8C9B6321E0E80E1007DFBB5 /* UIView+LYExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LYExt.h"; sourceTree = "<group>"; };
+		A8C9B6331E0E80E1007DFBB5 /* UIView+LYExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LYExt.m"; sourceTree = "<group>"; };
+		A8C9B6341E0E80E1007DFBB5 /* LYLibs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLibs.h; sourceTree = "<group>"; };
+		A8C9B6381E0E8135007DFBB5 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		A8C9B63B1E0E8210007DFBB5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A8C9B63C1E0EE916007DFBB5 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		A8C9B63D1E0EE916007DFBB5 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A8C9B5FA1E0E8099007DFBB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1259BC36F8CC8B3C9F226CB /* libPods-小兰魔法书.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8C9B6131E0E8099007DFBB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1035C49272479B2AB2874D51 /* libPods-小兰魔法书UITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A8C9B5F41E0E8099007DFBB5 = {
+			isa = PBXGroup;
+			children = (
+				A8C9B6381E0E8135007DFBB5 /* Podfile */,
+				A8C9B5FF1E0E8099007DFBB5 /* 小兰魔法书 */,
+				A8C9B6191E0E8099007DFBB5 /* 小兰魔法书UITests */,
+				A8C9B5FE1E0E8099007DFBB5 /* Products */,
+				BC20AEA42D03405E7A3C6C0B /* Pods */,
+				C9D3F0A3B0D9A6EFBC9163A4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A8C9B5FE1E0E8099007DFBB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8C9B5FD1E0E8099007DFBB5 /* 小兰魔法书.app */,
+				A8C9B6161E0E8099007DFBB5 /* 小兰魔法书UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A8C9B5FF1E0E8099007DFBB5 /* 小兰魔法书 */ = {
+			isa = PBXGroup;
+			children = (
+				A8C9B6031E0E8099007DFBB5 /* AppDelegate.h */,
+				A8C9B6041E0E8099007DFBB5 /* AppDelegate.m */,
+				A8C9B63B1E0E8210007DFBB5 /* PrefixHeader.pch */,
+				A8C9B6251E0E80E1007DFBB5 /* Classes */,
+				A8C9B62C1E0E80E1007DFBB5 /* Tools */,
+				A8C9B60C1E0E8099007DFBB5 /* Assets.xcassets */,
+				A8C9B60E1E0E8099007DFBB5 /* LaunchScreen.storyboard */,
+				A8C9B6111E0E8099007DFBB5 /* Info.plist */,
+				A8C9B6001E0E8099007DFBB5 /* Supporting Files */,
+			);
+			path = "小兰魔法书";
+			sourceTree = "<group>";
+		};
+		A8C9B6001E0E8099007DFBB5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8C9B6011E0E8099007DFBB5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A8C9B6191E0E8099007DFBB5 /* 小兰魔法书UITests */ = {
+			isa = PBXGroup;
+			children = (
+				A8C9B61A1E0E8099007DFBB5 /* _____UITests.m */,
+				A8C9B61C1E0E8099007DFBB5 /* Info.plist */,
+			);
+			path = "小兰魔法书UITests";
+			sourceTree = "<group>";
+		};
+		A8C9B6251E0E80E1007DFBB5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A8C9B6261E0E80E1007DFBB5 /* Main */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A8C9B6261E0E80E1007DFBB5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A8C9B6271E0E80E1007DFBB5 /* Controller */,
+				A8C9B62A1E0E80E1007DFBB5 /* Model */,
+				A8C9B62B1E0E80E1007DFBB5 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A8C9B6271E0E80E1007DFBB5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A8C9B6281E0E80E1007DFBB5 /* LYBaseController.h */,
+				A8C9B6291E0E80E1007DFBB5 /* LYBaseController.m */,
+				A8C9B63C1E0EE916007DFBB5 /* Person.h */,
+				A8C9B63D1E0EE916007DFBB5 /* Person.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A8C9B62A1E0E80E1007DFBB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A8C9B62B1E0E80E1007DFBB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A8C9B62C1E0E80E1007DFBB5 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				A8C9B62D1E0E80E1007DFBB5 /* LYConfig.h */,
+				A8C9B6341E0E80E1007DFBB5 /* LYLibs.h */,
+				A8C9B62E1E0E80E1007DFBB5 /* LYExtension */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		A8C9B62E1E0E80E1007DFBB5 /* LYExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A8C9B62F1E0E80E1007DFBB5 /* LYExtension.h */,
+				A8C9B6301E0E80E1007DFBB5 /* NSArray+LYExt.h */,
+				A8C9B6311E0E80E1007DFBB5 /* NSArray+LYExt.m */,
+				A8C9B6321E0E80E1007DFBB5 /* UIView+LYExt.h */,
+				A8C9B6331E0E80E1007DFBB5 /* UIView+LYExt.m */,
+			);
+			path = LYExtension;
+			sourceTree = "<group>";
+		};
+		BC20AEA42D03405E7A3C6C0B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8608317D779D5481D9ED7600 /* Pods-小兰魔法书.debug.xcconfig */,
+				91B91EE28AF8D0F988E44B38 /* Pods-小兰魔法书.release.xcconfig */,
+				4C6000A4D116B650AA378B0D /* Pods-小兰魔法书UITests.debug.xcconfig */,
+				30E40D7B3B05455C3C0C94E5 /* Pods-小兰魔法书UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C9D3F0A3B0D9A6EFBC9163A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B3EBAA4672BE6C00C9563BE /* libPods-小兰魔法书.a */,
+				213CA5EADBFD97CE9AB4F8B8 /* libPods-小兰魔法书UITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A8C9B5FC1E0E8099007DFBB5 /* 小兰魔法书 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8C9B61F1E0E8099007DFBB5 /* Build configuration list for PBXNativeTarget "小兰魔法书" */;
+			buildPhases = (
+				3E7C3612EF9F35C97BD085CE /* [CP] Check Pods Manifest.lock */,
+				A8C9B5F91E0E8099007DFBB5 /* Sources */,
+				A8C9B5FA1E0E8099007DFBB5 /* Frameworks */,
+				A8C9B5FB1E0E8099007DFBB5 /* Resources */,
+				3E8C0C3BD187FD4E628E59E9 /* [CP] Embed Pods Frameworks */,
+				F25C30E0D9C006596A5D2109 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "小兰魔法书";
+			productName = "小兰魔法书";
+			productReference = A8C9B5FD1E0E8099007DFBB5 /* 小兰魔法书.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A8C9B6151E0E8099007DFBB5 /* 小兰魔法书UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8C9B6221E0E8099007DFBB5 /* Build configuration list for PBXNativeTarget "小兰魔法书UITests" */;
+			buildPhases = (
+				A5D7F3324FC2FA6D35E2D226 /* [CP] Check Pods Manifest.lock */,
+				A8C9B6121E0E8099007DFBB5 /* Sources */,
+				A8C9B6131E0E8099007DFBB5 /* Frameworks */,
+				A8C9B6141E0E8099007DFBB5 /* Resources */,
+				B1A9CFF786024EBFF03EDB28 /* [CP] Embed Pods Frameworks */,
+				786DCD57256D9400A3CC6D6B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8C9B6181E0E8099007DFBB5 /* PBXTargetDependency */,
+			);
+			name = "小兰魔法书UITests";
+			productName = "小兰魔法书UITests";
+			productReference = A8C9B6161E0E8099007DFBB5 /* 小兰魔法书UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A8C9B5F51E0E8099007DFBB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = lanyang;
+				TargetAttributes = {
+					A8C9B5FC1E0E8099007DFBB5 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					A8C9B6151E0E8099007DFBB5 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A8C9B5FC1E0E8099007DFBB5;
+					};
+				};
+			};
+			buildConfigurationList = A8C9B5F81E0E8099007DFBB5 /* Build configuration list for PBXProject "小兰魔法书" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A8C9B5F41E0E8099007DFBB5;
+			productRefGroup = A8C9B5FE1E0E8099007DFBB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A8C9B5FC1E0E8099007DFBB5 /* 小兰魔法书 */,
+				A8C9B6151E0E8099007DFBB5 /* 小兰魔法书UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A8C9B5FB1E0E8099007DFBB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8C9B6391E0E8135007DFBB5 /* Podfile in Resources */,
+				A8C9B6101E0E8099007DFBB5 /* LaunchScreen.storyboard in Resources */,
+				A8C9B60D1E0E8099007DFBB5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8C9B6141E0E8099007DFBB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E7C3612EF9F35C97BD085CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3E8C0C3BD187FD4E628E59E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-小兰魔法书/Pods-小兰魔法书-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		786DCD57256D9400A3CC6D6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-小兰魔法书UITests/Pods-小兰魔法书UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5D7F3324FC2FA6D35E2D226 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B1A9CFF786024EBFF03EDB28 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-小兰魔法书UITests/Pods-小兰魔法书UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F25C30E0D9C006596A5D2109 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-小兰魔法书/Pods-小兰魔法书-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A8C9B5F91E0E8099007DFBB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8C9B63E1E0EE916007DFBB5 /* Person.m in Sources */,
+				A8C9B6051E0E8099007DFBB5 /* AppDelegate.m in Sources */,
+				A8C9B6351E0E80E1007DFBB5 /* LYBaseController.m in Sources */,
+				A8C9B6021E0E8099007DFBB5 /* main.m in Sources */,
+				A8C9B6371E0E80E1007DFBB5 /* UIView+LYExt.m in Sources */,
+				A8C9B6361E0E80E1007DFBB5 /* NSArray+LYExt.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8C9B6121E0E8099007DFBB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8C9B61B1E0E8099007DFBB5 /* _____UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A8C9B6181E0E8099007DFBB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8C9B5FC1E0E8099007DFBB5 /* 小兰魔法书 */;
+			targetProxy = A8C9B6171E0E8099007DFBB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A8C9B60E1E0E8099007DFBB5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8C9B60F1E0E8099007DFBB5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A8C9B61D1E0E8099007DFBB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A8C9B61E1E0E8099007DFBB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A8C9B6201E0E8099007DFBB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8608317D779D5481D9ED7600 /* Pods-小兰魔法书.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "小兰魔法书/PrefixHeader.pch";
+				INFOPLIST_FILE = "小兰魔法书/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lanyang.-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A8C9B6211E0E8099007DFBB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91B91EE28AF8D0F988E44B38 /* Pods-小兰魔法书.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "小兰魔法书/PrefixHeader.pch";
+				INFOPLIST_FILE = "小兰魔法书/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lanyang.-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A8C9B6231E0E8099007DFBB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C6000A4D116B650AA378B0D /* Pods-小兰魔法书UITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "小兰魔法书UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lanyang.-----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "小兰魔法书";
+			};
+			name = Debug;
+		};
+		A8C9B6241E0E8099007DFBB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30E40D7B3B05455C3C0C94E5 /* Pods-小兰魔法书UITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "小兰魔法书UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lanyang.-----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "小兰魔法书";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A8C9B5F81E0E8099007DFBB5 /* Build configuration list for PBXProject "小兰魔法书" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8C9B61D1E0E8099007DFBB5 /* Debug */,
+				A8C9B61E1E0E8099007DFBB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8C9B61F1E0E8099007DFBB5 /* Build configuration list for PBXNativeTarget "小兰魔法书" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8C9B6201E0E8099007DFBB5 /* Debug */,
+				A8C9B6211E0E8099007DFBB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8C9B6221E0E8099007DFBB5 /* Build configuration list for PBXNativeTarget "小兰魔法书UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8C9B6231E0E8099007DFBB5 /* Debug */,
+				A8C9B6241E0E8099007DFBB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A8C9B5F51E0E8099007DFBB5 /* Project object */;
+}
