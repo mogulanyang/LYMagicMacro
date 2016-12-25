@@ -113,10 +113,6 @@ GET_CollectionView_(mainCollectionView,
 }];
                     [obj registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"collectionCell"];
                     )
-
-
-
-
 #pragma mark - tableView和collectionView的数据源方法和代理方法
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

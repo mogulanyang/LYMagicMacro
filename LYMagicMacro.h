@@ -517,6 +517,18 @@ block?(block(__VA_ARGS__)):(failReturnValue)
         obj ; \
     )\
 }
+//初始化View
+#define GET_View_(ly_name, ly_superView, ly_backgroundColor, ...) \
+- (UIView *)ly_name \
+{ \
+    ly_lazy_(ly_name,\
+             UIView *obj = [[UIView alloc] init]; \
+             obj.backgroundColor = ly_backgroundColor; \
+             __VA_ARGS__\
+             obj; \
+             ) \
+}
+
 //baseif
 #define ly_if_(name, ...) \
 if (name) { \
