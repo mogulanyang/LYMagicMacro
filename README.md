@@ -104,6 +104,23 @@ GET_CollectionView_(mainCollectionView,
                     [obj registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"collectionCell"];
                     )
 ```
+## 调用
+```
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    // 布局,添加都不需要单独写.直接调用get方法即可.
+    [self dataDict];
+    [self dataDictM];
+    [self addBtn];
+    [self nameLabel];
+    [self p];
+    [self mainTableView];
+    [self mainFlowLayout];
+    [self mainCollectionView];
+}
+```
 ## 注意点
 - 不要修改初始化锁使用的宏,否则会出现问题.如果需要搬运,请先将需要搬运的代码注释,再进行搬运.
 - 如果需要其他个性初始化,只需要在最后面加一个逗号,把需要添加的属性赋值给obj即可.
