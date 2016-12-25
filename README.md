@@ -51,8 +51,8 @@ CollectionView_(mainCollectionView)
 GET_Button_(addBtn,
             self.view, @selector(addBtnClick:), @"touxiang", @"你好", 14, [UIColor blueColor],
             [obj mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.center.equalTo(self.view);
-}];
+                   make.center.equalTo(self.view);
+            }];
             [obj sizeToFit];
             )
 
@@ -60,8 +60,8 @@ GET_Button_(addBtn,
 GET_Label_(nameLabel,
            self.view, @"sdsdfsdfsdf", UIColorWithRandom, 17,
            [obj mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.center.equalTo(self.view);
-}];
+             make.center.equalTo(self.view);
+            }];
            )
 
 // 懒加载普通字典
@@ -85,8 +85,8 @@ GET_DIYObj_(Person,p,
 GET_TableView_(mainTableView,
                self.view, UITableViewStylePlain,
                [obj mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.edges.equalTo(self.view);
-}];
+                        make.edges.equalTo(self.view);
+               }];
                obj.backgroundColor = [UIColor blueColor];
                [obj registerClass:[UITableViewCell class] forCellReuseIdentifier:@"tableCell"];
                )
@@ -100,8 +100,8 @@ GET_FlowLyout_(mainFlowLayout,
 GET_CollectionView_(mainCollectionView,
                     self.view, self.mainFlowLayout, [UIColor orangeColor],
                     [obj mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.edges.equalTo(self.view);
-}];
+                        make.edges.equalTo(self.view);
+                    }];
                     [obj registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"collectionCell"];
                     )
 ```
