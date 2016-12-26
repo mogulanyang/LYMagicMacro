@@ -110,6 +110,11 @@ ly_set_block(returnClass,name,__VA_ARGS__)
 //UISearchBar
 #define SearchBar_(ly_name) \
 @property (nonatomic, strong) UISearchBar *ly_name;
+#define MapView_(ly_name) \
+@property (nonatomic, strong) MKMapView *ly_name;
+#define LocationManager_(ly_name) \
+@property (nonatomic, strong)CLLocationManager *ly_name;
+
 //UICollectionViewFlowLayout
 #define FlowLayout_(ly_name) \
 @property(nonatomic, strong)UICollectionViewFlowLayout *ly_name;
@@ -528,7 +533,36 @@ block?(block(__VA_ARGS__)):(failReturnValue)
              obj; \
              ) \
 }
-
+//初始化MapView
+#define GET_MapView_(ly_name, ly_superView, ...) \
+GET_DIYObj_(MKMapView, ly_name, \
+obj.mapType = MKMapTypeStandard; \
+obj.frame = CGRectMake(0, 0, UIScreen_W, UIScreen_H); \
+obj.delegate = self; \
+[ly_superView addSubview:obj]; \
+__VA_ARGS__\
+)
+//初始化LocationManager
+#define GET_LocationManger_(ly_name, ly_distanceFilter, ly_desiredAccuracy, ...) \
+GET_DIYObj_(CLLocationManager, ly_name, \
+            [obj requestWhenInUseAuthorization]; \
+            obj.delegate = self; \
+            if([UIDevice currentDevice].systemVersion.floatValue >= 9.0){ \
+                [obj allowsBackgroundLocationUpdates]; \
+            } \
+            obj.distanceFilter = ly_distanceFilter; \
+            obj.desiredAccuracy = ly_desiredAccuracy; \
+            __VA_ARGS__\
+            )
+/**************************************/
+//初始化非全局控件
+#define NEW_Class_(ly_class,...) \
+({\
+    ly_class *obj  = [[ly_class alloc] init];  \
+    __VA_ARGS__\
+    obj; \
+});
+/**************************************/
 //baseif
 #define ly_if_(name, ...) \
 if (name) { \

@@ -52,7 +52,6 @@ CollectionView_(mainCollectionView)
 - (void)addBtnClick:(UIButton *)sender
 {
     NSLog(@"%@",sender);
-    
 }
 
 #pragma mark - 懒加载初始化
