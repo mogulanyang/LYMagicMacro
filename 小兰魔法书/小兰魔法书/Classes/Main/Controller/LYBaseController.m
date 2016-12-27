@@ -50,26 +50,40 @@ CollectionView_(mainCollectionView)
     self.view.backgroundColor = UIColorWithHex16_(0xefefef);
     
     
-    // 非懒加载初始化
+    // 普通创建数组
     NSMutableArray *arrayM = NEW_Class_(NSMutableArray,
                                         [obj addObject:@"hehe"];
                                         [obj addObject:@"haha"];
+                                        // 这里可以打印这个数组,使用obj
                                         NSLog(@"括号里面可以调%@",obj);
                                         )
     NSLog(@"括号外面也可以调用%@",arrayM);
     
-    // 非懒加载初始化
+    
+    // 普通创建button
     UIButton *button = NEW_Class_(UIButton,
                                   [obj setTitle:@"heheda" forState:UIControlStateNormal];
                                   [obj setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
                                   obj.frame = CGRectMake(100, 100, 100, 100);
-                                  // 这里可以添加
+                                  // 这里可以添加,使用obj,和外面一样
                                   [self.view addSubview:obj];
                                   )
     // 这里可以添加
     [self.view addSubview:button];
     
     
+    // 普通创建自定义对象
+    Person *p2 = NEW_Class_(Person,
+                            obj.name = @"小明";
+                            obj.age = @(13).description;
+                            obj.sex = @"男";
+                            // 可以在这里打印,使用obj
+                            NSLog(@"%@-%@-%@",obj.name,obj.age,obj.sex);
+                            )
+    NSLog(@"%@-%@-%@",p2.name,p2.age,p2.sex);
+    
+    
+    // 懒加载在这里这样调用就可以
     [self addBtn];
     [self nameLabel];
     [self dataDict];
@@ -86,15 +100,12 @@ CollectionView_(mainCollectionView)
 }
 
 #pragma mark - 懒加载初始化
-
-
-
 // 懒加载button
 GET_Button_(addBtn,
             self.view, @selector(addBtnClick:), @"touxiang", @"你好", 14, [UIColor blueColor],
             [obj mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.center.equalTo(self.view);
-}];
+                make.center.equalTo(self.view);
+            }];
             [obj sizeToFit];
             )
 
@@ -102,8 +113,8 @@ GET_Button_(addBtn,
 GET_Label_(nameLabel,
            self.view, @"sdsdfsdfsdf", UIColorWithRandom, 17,
            [obj mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.center.equalTo(self.view);
-}];
+                make.center.equalTo(self.view);
+            }];
            )
 
 // 懒加载普通字典

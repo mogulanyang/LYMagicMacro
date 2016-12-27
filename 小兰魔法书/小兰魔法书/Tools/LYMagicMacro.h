@@ -61,8 +61,6 @@ NSString * const ly_strName = ly_String;
 [UIColor colorWithRed:((ly_0Xefefef & 0xFF0000) >> 16) / 255.0 green:((ly_0Xefefef & 0x00FF00) >> 8) / 255.0 blue:((ly_0Xefefef & 0x0000FF)) / 255.0 alpha:1]
 
 
-
-
 #pragma mark - 定义属性
 /**
  *     便捷定义@property属性
@@ -554,7 +552,6 @@ GET_DIYObj_(CLLocationManager, ly_name, \
             obj.desiredAccuracy = ly_desiredAccuracy; \
             __VA_ARGS__\
             )
-/**************************************/
 //初始化非全局控件
 #define NEW_Class_(ly_class,...) \
 ({\
@@ -562,7 +559,6 @@ GET_DIYObj_(CLLocationManager, ly_name, \
     __VA_ARGS__\
     obj; \
 });
-/**************************************/
 //baseif
 #define ly_if_(name, ...) \
 if (name) { \

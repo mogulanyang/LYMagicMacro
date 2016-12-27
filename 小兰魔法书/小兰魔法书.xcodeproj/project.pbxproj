@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1035C49272479B2AB2874D51 /* libPods-小兰魔法书UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 213CA5EADBFD97CE9AB4F8B8 /* libPods-小兰魔法书UITests.a */; };
+		A8159F7C1E12226A00260D08 /* LYAddButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A8159F7B1E12226A00260D08 /* LYAddButton.m */; };
 		A8C9B6021E0E8099007DFBB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C9B6011E0E8099007DFBB5 /* main.m */; };
 		A8C9B6051E0E8099007DFBB5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C9B6041E0E8099007DFBB5 /* AppDelegate.m */; };
 		A8C9B60D1E0E8099007DFBB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C9B60C1E0E8099007DFBB5 /* Assets.xcassets */; };
@@ -39,6 +40,8 @@
 		8608317D779D5481D9ED7600 /* Pods-小兰魔法书.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-小兰魔法书.debug.xcconfig"; path = "Pods/Target Support Files/Pods-小兰魔法书/Pods-小兰魔法书.debug.xcconfig"; sourceTree = "<group>"; };
 		91B91EE28AF8D0F988E44B38 /* Pods-小兰魔法书.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-小兰魔法书.release.xcconfig"; path = "Pods/Target Support Files/Pods-小兰魔法书/Pods-小兰魔法书.release.xcconfig"; sourceTree = "<group>"; };
 		A8159F791E1211FF00260D08 /* LYMagicMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYMagicMacro.h; sourceTree = "<group>"; };
+		A8159F7A1E12226A00260D08 /* LYAddButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAddButton.h; sourceTree = "<group>"; };
+		A8159F7B1E12226A00260D08 /* LYAddButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAddButton.m; sourceTree = "<group>"; };
 		A8C9B5FD1E0E8099007DFBB5 /* 小兰魔法书.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "小兰魔法书.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C9B6011E0E8099007DFBB5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A8C9B6031E0E8099007DFBB5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 				A8C9B6291E0E80E1007DFBB5 /* LYBaseController.m */,
 				A8C9B63C1E0EE916007DFBB5 /* Person.h */,
 				A8C9B63D1E0EE916007DFBB5 /* Person.m */,
+				A8159F7A1E12226A00260D08 /* LYAddButton.h */,
+				A8159F7B1E12226A00260D08 /* LYAddButton.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -423,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8159F7C1E12226A00260D08 /* LYAddButton.m in Sources */,
 				A8C9B63E1E0EE916007DFBB5 /* Person.m in Sources */,
 				A8C9B6051E0E8099007DFBB5 /* AppDelegate.m in Sources */,
 				A8C9B6351E0E80E1007DFBB5 /* LYBaseController.m in Sources */,
