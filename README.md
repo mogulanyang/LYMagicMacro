@@ -23,7 +23,8 @@ ps:小兰魔法宏现今维护中.致力于让体验者忘掉分类,拒绝耦合
 
 ## 使用方法
 ##声明属性
-``` objc
+``` 
+objc
 // 声明普通字典
 Dictionary_(dataDict)
 // 声明可变字典
@@ -46,6 +47,7 @@ CollectionView_(mainCollectionView)
 如果你需要添加额外的属性,括号里面,使用obj来添加各种属性即可.
 ```
 #pragma mark - 懒加载初始化
+objc
 // 懒加载button
 GET_Button_(addBtn,
             self.view, @selector(addBtnClick:), @"touxiang", @"你好", 14, [UIColor blueColor],
