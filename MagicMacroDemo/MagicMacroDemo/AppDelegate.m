@@ -32,13 +32,14 @@
     UITabBarController *tabBarVC = [[UITabBarController alloc] init];
     
     ViewController *VC = [[ViewController alloc] init];
-    VC.tabBarController.tabBar.tintColor = [UIColor blackColor];
+    VC.tabBarItem.image = [[UIImage imageNamed:@"magic"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];;
     
     TwoViewController *twoVC = [[TwoViewController alloc] init];
-    twoVC.tabBarController.tabBar.tintColor = [UIColor blackColor];
-
+    twoVC.tabBarItem.image = [[UIImage imageNamed:@"normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];;
     
     tabBarVC.viewControllers = @[VC, twoVC];
+    tabBarVC.tabBar.barTintColor = [UIColor colorWithWhite:0.3 alpha:0.8];
+    [tabBarVC.tabBar setTintColor:[UIColor whiteColor]];
     
     _window.rootViewController = tabBarVC;
     

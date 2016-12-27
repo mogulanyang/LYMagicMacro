@@ -38,7 +38,7 @@ UICollectionViewDataSource
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor colorWithWhite:0.5 alpha:1];
+    self.view.backgroundColor = [UIColor colorWithWhite:0.3 alpha:1];
     self.title = @"普通";
     
     [self configUI];
@@ -50,18 +50,19 @@ UICollectionViewDataSource
     self.upTableView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height/3);
     self.upTableView.delegate = self;
     self.upTableView.dataSource = self;
+    self.upTableView.rowHeight = 54;
     [self.view addSubview:self.upTableView];
     
     
     self.downCollectionView.backgroundColor = [UIColor grayColor];
     [self.downCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"collectionID"];
-    self.downCollectionView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height/3, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height/3);
+    self.downCollectionView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height/3+5, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height/3);
     self.downCollectionView.delegate = self;
     self.downCollectionView.dataSource = self;
     [self.view addSubview:self.downCollectionView];
     
     
-    self.backBtn.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height*2/3+60, 150, 35);
+    self.backBtn.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height*2/3+10, 60, 44);
     [self.backBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.backBtn];
     
@@ -72,7 +73,7 @@ UICollectionViewDataSource
     [self.view addSubview:self.imageView];
 
     self.lyView.backgroundColor = [UIColor purpleColor];
-    self.lyView.frame = CGRectMake(280, [UIScreen mainScreen].bounds.size.height*2/3+60, 169, 44);
+    self.lyView.frame = CGRectMake(280, [UIScreen mainScreen].bounds.size.height*2/3+60, 130, 44);
     [self.view addSubview:self.lyView];
     
     
@@ -122,11 +123,11 @@ UICollectionViewDataSource
 {
     if (!_backBtn) {
         _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_backBtn setTitle:@"haha" forState:UIControlStateNormal];
+        [_backBtn setTitle:@"Normal" forState:UIControlStateNormal];
         _backBtn.titleLabel.font = [UIFont systemFontOfSize:15];
-        [_backBtn setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
-        [_backBtn setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
         _backBtn.backgroundColor = [UIColor whiteColor];
+        self.backBtn.backgroundColor = [UIColor blackColor];
+        [self.backBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     };
     return _backBtn;
 }
@@ -135,7 +136,7 @@ UICollectionViewDataSource
 {
     if (!_nameField) {
         _nameField = [[UITextField alloc] init];
-        _nameField.placeholder = @"请输入用户名";
+        _nameField.placeholder = @"普通布局";
         _nameField.borderStyle = UITextBorderStyleRoundedRect;
         _nameField.font = [UIFont fontWithName:@"Arial" size:15]; // 设置属性
         _nameField.clearButtonMode = UITextFieldViewModeAlways; // 带X模式
@@ -178,7 +179,7 @@ UICollectionViewDataSource
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"tableID"];
-    cell.backgroundColor = [UIColor redColor];
+    cell.backgroundColor = [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1];
     return cell;
 }
 
@@ -191,7 +192,7 @@ UICollectionViewDataSource
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collectionID" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor greenColor];
+    cell.backgroundColor = [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1];
     
     return cell;
 }

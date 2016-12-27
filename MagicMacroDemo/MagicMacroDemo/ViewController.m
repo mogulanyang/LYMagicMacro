@@ -72,6 +72,7 @@ DIYObj_(LYDiyView, lyView)
 GET_TableView_(upTableView, self.view,UITableViewStylePlain,
                obj.frame = CGRectMake(0, 0, UIScreen_W, UIScreen_H/3);
                [obj registerClass:[UITableViewCell class] forCellReuseIdentifier:@"tableID"];
+               obj.rowHeight = 54;
                )
 // 懒加载flowlayout
 GET_FlowLayout_(downLayout,
@@ -80,17 +81,17 @@ GET_FlowLayout_(downLayout,
                 )
 // 懒加载collectionView
 GET_CollectionView_(downCollectionView, self.view, self.downLayout, [UIColor whiteColor],
-                    obj.frame = CGRectMake(0, UIScreen_H/3, UIScreen_W, UIScreen_H/3);
+                    obj.frame = CGRectMake(0, UIScreen_H/3+5, UIScreen_W, UIScreen_H/3);
                     [obj registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"collectionID"];
                     obj.backgroundColor = [UIColor grayColor];
                     )
 // 懒加载button
-GET_Button_(backBtn, self.view, @selector(backClick), nil, @"back", 15, [UIColor whiteColor],
+GET_Button_(backBtn, self.view, @selector(backClick), nil, @"Magic", 15, [UIColor whiteColor],
             obj.backgroundColor = [UIColor blackColor];
             obj.frame = CGRectMake(0, UIScreen_H*2/3 + 10, 60, 44);
             )
 // 懒加载textFiled
-GET_TextField_(nameField, self.view, 15, @"请输入小兰魔法宏",
+GET_TextField_(nameField, self.view, 15, @"魔法宏布局",
                obj.frame = CGRectMake(0, UIScreen_H*2/3+60, 150,35);
                obj.clearButtonMode = UITextFieldViewModeAlways;
                )
@@ -103,7 +104,7 @@ GET_ImageView_(imageView, self.view, @"mo",
 GET_DIYObj_(LYDiyView, lyView,
             [self.view addSubview:obj];
             obj.backgroundColor = [UIColor purpleColor];
-            obj.frame = CGRectMake(280, UIScreen_H*2/3+60, 169, 44);
+            obj.frame = CGRectMake(280, UIScreen_H*2/3+60, 130, 44);
             )
 
 
