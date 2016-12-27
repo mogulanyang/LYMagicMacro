@@ -38,6 +38,7 @@
 		7B3EBAA4672BE6C00C9563BE /* libPods-小兰魔法书.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-小兰魔法书.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8608317D779D5481D9ED7600 /* Pods-小兰魔法书.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-小兰魔法书.debug.xcconfig"; path = "Pods/Target Support Files/Pods-小兰魔法书/Pods-小兰魔法书.debug.xcconfig"; sourceTree = "<group>"; };
 		91B91EE28AF8D0F988E44B38 /* Pods-小兰魔法书.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-小兰魔法书.release.xcconfig"; path = "Pods/Target Support Files/Pods-小兰魔法书/Pods-小兰魔法书.release.xcconfig"; sourceTree = "<group>"; };
+		A8159F791E1211FF00260D08 /* LYMagicMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYMagicMacro.h; sourceTree = "<group>"; };
 		A8C9B5FD1E0E8099007DFBB5 /* 小兰魔法书.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "小兰魔法书.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C9B6011E0E8099007DFBB5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A8C9B6031E0E8099007DFBB5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		A8C9B61C1E0E8099007DFBB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8C9B6281E0E80E1007DFBB5 /* LYBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBaseController.h; sourceTree = "<group>"; };
 		A8C9B6291E0E80E1007DFBB5 /* LYBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBaseController.m; sourceTree = "<group>"; };
-		A8C9B62D1E0E80E1007DFBB5 /* LYConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYConfig.h; sourceTree = "<group>"; };
 		A8C9B62F1E0E80E1007DFBB5 /* LYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYExtension.h; sourceTree = "<group>"; };
 		A8C9B6301E0E80E1007DFBB5 /* NSArray+LYExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LYExt.h"; sourceTree = "<group>"; };
 		A8C9B6311E0E80E1007DFBB5 /* NSArray+LYExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LYExt.m"; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 		A8C9B62C1E0E80E1007DFBB5 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				A8C9B62D1E0E80E1007DFBB5 /* LYConfig.h */,
+				A8159F791E1211FF00260D08 /* LYMagicMacro.h */,
 				A8C9B6341E0E80E1007DFBB5 /* LYLibs.h */,
 				A8C9B62E1E0E80E1007DFBB5 /* LYExtension */,
 			);

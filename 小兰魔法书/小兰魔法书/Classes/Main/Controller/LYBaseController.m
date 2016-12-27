@@ -10,7 +10,8 @@
 #import "LYBaseController.h"
 #import "Person.h"
 
-@interface LYBaseController ()<
+@interface LYBaseController ()
+<
 UITableViewDelegate,
 UITableViewDataSource,
 UICollectionViewDelegate,
@@ -40,13 +41,43 @@ CollectionView_(mainCollectionView)
 {
     [super viewDidLoad];
     
-    [self setupUI];
+    [self configUI];
 }
 
 #pragma mark - UI层
-- (void)setupUI
+- (void)configUI
 {
     self.view.backgroundColor = UIColorWithHex16_(0xefefef);
+    
+    
+    // 非懒加载初始化
+    NSMutableArray *arrayM = NEW_Class_(NSMutableArray,
+                                        [obj addObject:@"hehe"];
+                                        [obj addObject:@"haha"];
+                                        NSLog(@"括号里面可以调%@",obj);
+                                        )
+    NSLog(@"括号外面也可以调用%@",arrayM);
+    
+    // 非懒加载初始化
+    UIButton *button = NEW_Class_(UIButton,
+                                  [obj setTitle:@"heheda" forState:UIControlStateNormal];
+                                  [obj setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+                                  obj.frame = CGRectMake(100, 100, 100, 100);
+                                  // 这里可以添加
+                                  [self.view addSubview:obj];
+                                  )
+    // 这里可以添加
+    [self.view addSubview:button];
+    
+    
+    [self addBtn];
+    [self nameLabel];
+    [self dataDict];
+    [self dataDictM];
+    [self p];
+    [self mainTableView];
+    [self mainCollectionView];
+    
 }
 
 - (void)addBtnClick:(UIButton *)sender
@@ -55,6 +86,9 @@ CollectionView_(mainCollectionView)
 }
 
 #pragma mark - 懒加载初始化
+
+
+
 // 懒加载button
 GET_Button_(addBtn,
             self.view, @selector(addBtnClick:), @"touxiang", @"你好", 14, [UIColor blueColor],
@@ -88,30 +122,30 @@ GET_DIYObj_(Person,p,
             NSLog(@"%@", obj);
             )
 
-// 懒加载tableView
-// 记得遵守tableView的数据源方法和代理方法
+// 懒加载tableView,记得遵守tableView的数据源方法和代理方法
 GET_TableView_(mainTableView,
                self.view, UITableViewStylePlain,
                [obj mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.edges.equalTo(self.view);
-}];
+                    make.edges.equalTo(self.view);
+                }];
                obj.backgroundColor = [UIColor blueColor];
                [obj registerClass:[UITableViewCell class] forCellReuseIdentifier:@"tableCell"];
                )
 
 
 // 懒加载flowlayout
-GET_FlowLyout_(mainFlowLayout,
-               UICollectionViewScrollDirectionVertical, CGSizeMake(100, 100), 0, 0)
+GET_FlowLayout_(mainFlowLayout,
+                UICollectionViewScrollDirectionVertical, CGSizeMake(100, 100), 0, 0)
 
-// 懒加载collectionView
+// 懒加载collectionView,记得遵守数据源方法和代理方法
 GET_CollectionView_(mainCollectionView,
                     self.view, self.mainFlowLayout, [UIColor orangeColor],
                     [obj mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.edges.equalTo(self.view);
-}];
+                        make.edges.equalTo(self.view);
+                    }];
                     [obj registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"collectionCell"];
                     )
+
 #pragma mark - tableView和collectionView的数据源方法和代理方法
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

@@ -110,6 +110,11 @@ ly_set_block(returnClass,name,__VA_ARGS__)
 //UISearchBar
 #define SearchBar_(ly_name) \
 @property (nonatomic, strong) UISearchBar *ly_name;
+#define MapView_(ly_name) \
+@property (nonatomic, strong) MKMapView *ly_name;
+#define LocationManager_(ly_name) \
+@property (nonatomic, strong)CLLocationManager *ly_name;
+
 //UICollectionViewFlowLayout
 #define FlowLayout_(ly_name) \
 @property(nonatomic, strong)UICollectionViewFlowLayout *ly_name;
@@ -440,7 +445,7 @@ block?(block(__VA_ARGS__)):(failReturnValue)
         ) \
 }
 //初始化collectionViewFlowLayout
-#define GET_FlowLyout_(ly_name, ly_scrollDirection, ly_itemSize, ly_minimumLineSpacing, ly_minimumInteritemSpacing, ...) \
+#define GET_FlowLayout_(ly_name, ly_scrollDirection, ly_itemSize, ly_minimumLineSpacing, ly_minimumInteritemSpacing, ...) \
 - (UICollectionViewFlowLayout *)ly_name \
 { \
     ly_lazy_(ly_name,\
@@ -517,6 +522,47 @@ block?(block(__VA_ARGS__)):(failReturnValue)
         obj ; \
     )\
 }
+//初始化View
+#define GET_View_(ly_name, ly_superView, ly_backgroundColor, ...) \
+- (UIView *)ly_name \
+{ \
+    ly_lazy_(ly_name,\
+             UIView *obj = [[UIView alloc] init]; \
+             obj.backgroundColor = ly_backgroundColor; \
+             __VA_ARGS__\
+             obj; \
+             ) \
+}
+//初始化MapView
+#define GET_MapView_(ly_name, ly_superView, ...) \
+GET_DIYObj_(MKMapView, ly_name, \
+obj.mapType = MKMapTypeStandard; \
+obj.frame = CGRectMake(0, 0, UIScreen_W, UIScreen_H); \
+obj.delegate = self; \
+[ly_superView addSubview:obj]; \
+__VA_ARGS__\
+)
+//初始化LocationManager
+#define GET_LocationManger_(ly_name, ly_distanceFilter, ly_desiredAccuracy, ...) \
+GET_DIYObj_(CLLocationManager, ly_name, \
+            [obj requestWhenInUseAuthorization]; \
+            obj.delegate = self; \
+            if([UIDevice currentDevice].systemVersion.floatValue >= 9.0){ \
+                [obj allowsBackgroundLocationUpdates]; \
+            } \
+            obj.distanceFilter = ly_distanceFilter; \
+            obj.desiredAccuracy = ly_desiredAccuracy; \
+            __VA_ARGS__\
+            )
+/**************************************/
+//初始化非全局控件
+#define NEW_Class_(ly_class,...) \
+({\
+    ly_class *obj  = [[ly_class alloc] init];  \
+    __VA_ARGS__\
+    obj; \
+});
+/**************************************/
 //baseif
 #define ly_if_(name, ...) \
 if (name) { \
@@ -531,186 +577,6 @@ if (!_##ly_name) { \
 } \
 return _##ly_name; \
 
-/** saveCopy  */
-///**
-// 初始化属性
-// */
-//#pragma mark - 2.0.初始化控件
-////初始化Button
-//#define GET_Button_(ly_name, ly_superView,ly_SEL,ly_imageName,ly_title, ly_font, ly_titleColor, ...)\
-//- (UIButton *)ly_name\
-//{\
-//    ly_lazy_(ly_name,\
-//             UIButton *obj = [UIButton buttonWithType:UIButtonTypeCustom]; \
-//             ly_if_(ly_title,[obj setTitle:ly_title forState:UIControlStateNormal];) \
-//             ly_if_(ly_font,obj.titleLabel.font = [UIFont systemFontOfSize:ly_font];) \
-//             ly_if_(ly_titleColor,[obj setTitleColor:ly_titleColor forState:UIControlStateNormal];) \
-//             ly_if_(ly_imageName, [obj setImage:[UIImage imageNamed:ly_imageName] forState:UIControlStateNormal];)\
-//             ly_if_(ly_SEL, [obj addTarget:self action:ly_SEL forControlEvents:UIControlEventTouchUpInside];)\
-//             [ly_superView addSubview:obj];\
-//             __VA_ARGS__\
-//             obj;\
-//             )\
-//}
-//
-//
-////初始化Label
-//#define GET_Label_(ly_name, ly_superView, ly_text, ly_titleColor, ly_font, ...) \
-//-(UILabel *)ly_name\
-//{ \
-//    ly_lazy_(ly_name,\
-//            UILabel *obj = [[UILabel alloc] init]; \
-//            ly_if_(ly_text,obj.text = ly_text;) \
-//            ly_if_(ly_titleColor,obj.textColor = ly_titleColor;) \
-//            ly_if_(ly_font,obj.font = [UIFont systemFontOfSize:ly_font];)\
-//            obj.numberOfLines = 0; \
-//            [ly_superView addSubview:obj]; \
-//            __VA_ARGS__\
-//            obj;\
-//            )\
-//}
-//
-////初始化imageView
-//#define GET_ImageView_(ly_name, ly_superView, ly_imageName, ...) \
-//- (UIImageView *)ly_name \
-//{ \
-//    ly_lazy_(ly_name,\
-//            UIImageView *obj = [[UIImageView alloc] init]; \
-//            obj.image = [UIImage imageNamed:ly_imageName]; \
-//            obj.contentMode = UIViewContentModeScaleAspectFill; \
-//            [ly_superView addSubview:obj]; \
-//            __VA_ARGS__\
-//            obj; \
-//            ) \
-//}
-//
-////初始化textField
-//#define GET_TextField_(ly_name, ly_superView, ly_UIFont,ly_placeholder, ...) \
-//-(UITextField *)ly_name \
-//{ \
-//    ly_lazy_(ly_name,\
-//            UITextField *obj = [[UITextField alloc] init]; \
-//            ly_if_(ly_placeholder,obj.placeholder = ly_placeholder;) \
-//            obj.borderStyle = UITextBorderStyleRoundedRect; \
-//            obj.font = ly_UIFont;  \
-//            [ly_superView addSubview:obj]; \
-//            __VA_ARGS__\
-//            obj; \
-//        ) \
-//} \
-//
-////初始化tableView (记得注册Cell)
-//#define GET_TableView_(ly_name, ly_superView, ly_style, ...) \
-//- (UITableView *)ly_name \
-//{ \
-//    ly_lazy_(ly_name,\
-//            UITableView *obj = [[UITableView alloc] initWithFrame:CGRectZero style: ly_style]; \
-//            [ly_superView addSubview:obj]; \
-//            obj.dataSource = self; \
-//            obj.delegate = self; \
-//            __VA_ARGS__\
-//            obj; \
-//        ) \
-//}
-//
-////初始化collectionViewFlowLayout
-//#define GET_FlowLyout_(ly_name, ly_scrollDirection, ly_itemSize, ly_minimumLineSpacing, ly_minimumInteritemSpacing, ...) \
-//- (UICollectionViewFlowLayout *)ly_name \
-//{ \
-//    ly_lazy_(ly_name,\
-//            UICollectionViewFlowLayout *obj = [[UICollectionViewFlowLayout alloc] init]; \
-//            ly_if_(ly_scrollDirection,obj.scrollDirection = ly_scrollDirection;) \
-//            ly_if_(ly_minimumLineSpacing,obj.minimumLineSpacing = ly_minimumLineSpacing;) \
-//            ly_if_(ly_minimumInteritemSpacing,obj.minimumInteritemSpacing = ly_minimumInteritemSpacing;) \
-//            ly_if_(ly_itemSize,obj.itemSize = ly_itemSize;) \
-//            __VA_ARGS__\
-//            obj; \
-//        ) \
-//}
-//
-////初始化collectionView
-//#define GET_CollectionView_(ly_name, ly_superView, ly_flowLayout, ly_color, ...) \
-//- (UICollectionView *)ly_name \
-//{ \
-//        ly_lazy_(ly_name,\
-//            UICollectionView *obj = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:ly_flowLayout]; \
-//            obj.dataSource = self; \
-//            obj.delegate = self; \
-//            [ly_superView addSubview:obj]; \
-//            obj.backgroundColor = ly_color; \
-//            __VA_ARGS__\
-//            obj; \
-//        )\
-//}
-//
-////初始化普通数组
-//#define GET_Array_(ly_name, ...) \
-//- (NSArray *)ly_name \
-//{ \
-//    ly_lazy_(ly_name,\
-//            NSArray *obj = [NSArray array]; \
-//            __VA_ARGS__\
-//            obj; \
-//        ) \
-//}
-//
-////初始化可变数组
-//#define GET_mArray_(ly_name, ...)\
-//- (NSMutableArray *)ly_name \
-//{ \
-//        ly_lazy_(ly_name,\
-//            NSMutableArray *obj = [NSMutableArray array]; \
-//            __VA_ARGS__\
-//            obj; \
-//        ) \
-//}
-//
-////初始化字典
-//#define GET_Dictionary_(ly_name, ...) \
-//- (NSDictionary *)ly_name \
-//{ \
-//    ly_lazy_(ly_name,\
-//            NSDictionary *obj = [NSDictionary dictionary]; \
-//            __VA_ARGS__\
-//            obj; \
-//        ) \
-//}
-//
-////初始化可变字典
-//#define GET_mDictionary_(ly_name, ...) \
-//- (NSMutableDictionary *)ly_name \
-//{ \
-//    ly_lazy_(ly_name,\
-//            NSMutableDictionary *obj = [NSMutableDictionary dictionary]; \
-//            __VA_ARGS__\
-//            obj; \
-//        ) \
-//}
-//
-//
-////baseif
-//#define ly_if_(name, ...) \
-//if (name) { \
-//__VA_ARGS__\
-//}
-////baseLazy
-//#define ly_lazy_(ly_name, ...) \
-//if (!_##ly_name) { \
-//    _##ly_name = ({ \
-//        __VA_ARGS__\
-//    }); \
-//} \
-//return _##ly_name; \
-////初始化自定义对象
-//#define GET_DIYObj_(ly_class, ly_name, ...) \
-//- (ly_class *)ly_name \
-//{ \
-//    ly_lazy_(ly_name, \
-//        ly_class *obj = [[ly_class alloc] init]; \
-//        __VA_ARGS__ \
-//        obj ; \
-//    )\
-//}
 
 
 
