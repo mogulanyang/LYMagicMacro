@@ -11,7 +11,7 @@ ps:小兰魔法宏现今维护中.致力于让体验者忘掉分类,拒绝耦合
 
 如果你发现了什么bug或者不足之处,欢迎各种邮件骚扰:lanyang0829@163.com
 ## 功能
-**快速声明和初始化控件的宏定义.**  
+**快速声明和初始化对象的宏定义.**  
 
 蝇量级,低耦合,项目仅1个文件,且不需任何分类和依赖库.
 
@@ -42,8 +42,20 @@ FlowLayout_(mainFlowLayout)
 CollectionView_(mainCollectionView)
 // 还有其他....
 ```
-##懒加载初始化控件
-如果你需要添加额外的属性,括号里面,使用obj来添加各种属性即可.
+##普通初始化对象
+```objc
+// 不使用懒加载,创建可变数组并添加属性
+NSMutableArray *arrayM = NEW_Class_(NSMutableArray,
+                            [obj addObject:@"value1"];
+                            [obj addObject:@"value2"];
+                            NSLog(@"%@",obj)
+                            )
+// 创建普通数组
+NSArray *array = NEW_Class_(NSArray,
+                    obj = arrayM.copy;
+                    )
+```
+##懒加载初始化对象
 ```objc
 #pragma mark - 懒加载初始化
 // 懒加载button
