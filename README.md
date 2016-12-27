@@ -105,7 +105,7 @@ GET_CollectionView_(mainCollectionView,
                     )
 ```
 ## 调用
-```
+```objc
 - (void)viewDidLoad
 {
     [super viewDidLoad];
