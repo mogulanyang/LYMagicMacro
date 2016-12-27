@@ -42,6 +42,20 @@ FlowLayout_(mainFlowLayout)
 CollectionView_(mainCollectionView)
 // 还有其他....
 ```
+##普通创建属性或控件
+如果你需要添加额外的属性,括号里面,使用obj来添加各种属性即可.
+```objc
+// 不使用懒加载,创建可变数组并添加属性
+NSMutableArray *arrayM = NEW_Class_(NSMutableArray,
+                            [obj addObject:@"value1"];
+                            [obj addObject:@"value2"];
+                            NSLog(@"%@",obj)
+                            )
+// 创建普通数组
+NSArray *array = NEW_Class_(NSArray,
+                    obj = arrayM.copy;
+                    )
+```
 ##懒加载初始化控件
 如果你需要添加额外的属性,括号里面,使用obj来添加各种属性即可.
 ```objc
