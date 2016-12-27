@@ -42,7 +42,7 @@ FlowLayout_(mainFlowLayout)
 CollectionView_(mainCollectionView)
 // 还有其他....
 ```
-##普通初始化
+##普通初始化对象
 ```objc
 // 不使用懒加载,创建可变数组并添加属性
 NSMutableArray *arrayM = NEW_Class_(NSMutableArray,
@@ -55,7 +55,7 @@ NSArray *array = NEW_Class_(NSArray,
                     obj = arrayM.copy;
                     )
 ```
-##懒加载初始化控件
+##懒加载初始化对象
 ```objc
 #pragma mark - 懒加载初始化
 // 懒加载button
