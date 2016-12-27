@@ -23,6 +23,7 @@ ps:小兰魔法宏现今维护中.致力于让体验者忘掉分类,拒绝耦合
 
 ## 使用方法
 ##声明属性
+XXX_()声明,如果是自定义对象使用DIYObj_(对象名).
 ```objc
 // 声明普通字典
 Dictionary_(dataDict)
@@ -42,8 +43,8 @@ FlowLayout_(mainFlowLayout)
 CollectionView_(mainCollectionView)
 // 还有其他....
 ```
-##普通创建属性或控件
-如果你需要添加额外的属性,括号里面,使用obj来添加各种属性即可.
+##普通初始化
+NEW_Class_(类名)方法,如果你需要添加额外的属性,括号里面,使用obj来添加各种属性即可.
 ```objc
 // 不使用懒加载,创建可变数组并添加属性
 NSMutableArray *arrayM = NEW_Class_(NSMutableArray,
@@ -57,7 +58,7 @@ NSArray *array = NEW_Class_(NSArray,
                     )
 ```
 ##懒加载初始化控件
-如果你需要添加额外的属性,括号里面,使用obj来添加各种属性即可.
+GET_XXX_(...)方法,如果你需要添加额外的属性,括号里面,使用obj来添加各种属性即可.
 ```objc
 #pragma mark - 懒加载初始化
 // 懒加载button
