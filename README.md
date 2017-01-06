@@ -1,6 +1,6 @@
 ![logo](https://github.com/mogulanyang/LYMagicMacro/blob/master/sucai/magic.png)
 # LYMagicMacro
-**你有没有想过,在你的项目你面只多加1个.h文件,会发生怎么样的变化?**
+**你有没有想过,在你的项目里面只多加1个.h文件,会发生怎么样的变化?**
 
 **你还在一次一次的写无数行代码进行控件的创建,添加,布局么?**
 
