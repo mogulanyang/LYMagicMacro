@@ -9,10 +9,17 @@
 #define KeyWindow \
 [UIApplication sharedApplication].keyWindow
 //屏幕
+#define ScreenWeight \
+[UIScreen mainScreen].bounds.size.width
+#define ScreenHeight \
+[UIScreen mainScreen].bounds.size.height
 #define UIScreen_W \
 [UIScreen mainScreen].bounds.size.width
 #define UIScreen_H \
 [UIScreen mainScreen].bounds.size.height
+//weakSelf
+#define WeakSelf(type)  __weak typeof(type) weak##type = type;
+
 
 /** 通知相关  */
 //通知中心发送通知
@@ -25,9 +32,7 @@
 #define NSNotificationRemove \
 [[NSNotificationCenter defaultCenter] removeObserver:self]
 
-//弱引用
-#define WeakSelf(vc) \
-__weak typeof(vc *) weakSelf = self
+
 //const字符串
 #define NSString_Const_H_(ly_strName) \
 UIKIT_EXTERN NSString * const ly_strName;
@@ -53,11 +58,17 @@ NSString * const ly_strName = ly_String;
 //RGB颜色
 #define UIColorWithRGB_(ly_R,ly_G,ly_B) \
 [UIColor colorWithRed:ly_R green:ly_G blue:ly_B alpha:1]
+#define ColorRGB_(ly_R,ly_G,ly_B) \
+[UIColor colorWithRed:ly_R green:ly_G blue:ly_B alpha:1]
 //随机颜色
 #define UIColorWithRandom \
 [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1]
+#define RandomColor \
+[UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1]
 //十六进制颜色
 #define UIColorWithHex16_(ly_0Xefefef) \
+[UIColor colorWithRed:((ly_0Xefefef & 0xFF0000) >> 16) / 255.0 green:((ly_0Xefefef & 0x00FF00) >> 8) / 255.0 blue:((ly_0Xefefef & 0x0000FF)) / 255.0 alpha:1]
+#define colorWithHex_(ly_0Xefefef) \
 [UIColor colorWithRed:((ly_0Xefefef & 0xFF0000) >> 16) / 255.0 green:((ly_0Xefefef & 0x00FF00) >> 8) / 255.0 blue:((ly_0Xefefef & 0x0000FF)) / 255.0 alpha:1]
 
 
@@ -425,7 +436,7 @@ block?(block(__VA_ARGS__)):(failReturnValue)
             UITextField *obj = [[UITextField alloc] init]; \
             ly_if_(ly_placeholder,obj.placeholder = ly_placeholder;) \
             obj.borderStyle = UITextBorderStyleRoundedRect; \
-            obj.font = [UIFont systemFontOfSize:ly_UIFont];  \
+            obj.font = ly_UIFont;  \
             [ly_superView addSubview:obj]; \
             __VA_ARGS__\
             obj; \
@@ -452,7 +463,7 @@ block?(block(__VA_ARGS__)):(failReturnValue)
             UICollectionViewFlowLayout *obj = [[UICollectionViewFlowLayout alloc] init]; \
             ly_if_(ly_scrollDirection,obj.scrollDirection = ly_scrollDirection;) \
             obj.minimumLineSpacing = ly_minimumLineSpacing; \
-            obj.minimumInteritemSpacing = ly_minimumInteritemSpacing; \
+            ly_if_(ly_minimumInteritemSpacing,obj.minimumInteritemSpacing = ly_minimumInteritemSpacing;) \
             obj.itemSize = ly_itemSize; \
             __VA_ARGS__\
             obj; \
@@ -528,6 +539,7 @@ block?(block(__VA_ARGS__)):(failReturnValue)
 { \
     ly_lazy_(ly_name,\
              UIView *obj = [[UIView alloc] init]; \
+             [ly_superView addSubview:obj];\
              obj.backgroundColor = ly_backgroundColor; \
              __VA_ARGS__\
              obj; \

@@ -91,7 +91,7 @@ GET_Button_(backBtn, self.view, @selector(backClick), nil, @"Magic", 15, [UIColo
             obj.frame = CGRectMake(0, UIScreen_H*2/3 + 10, 60, 44);
             )
 // 懒加载textFiled
-GET_TextField_(nameField, self.view, 15, @"魔法宏布局",
+GET_TextField_(nameField, self.view, [UIFont systemFontOfSize:16], @"魔法宏布局",
                obj.frame = CGRectMake(0, UIScreen_H*2/3+60, 150,35);
                obj.clearButtonMode = UITextFieldViewModeAlways;
                )
